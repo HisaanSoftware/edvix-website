@@ -114,9 +114,8 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-start overflow-hidden bg-black">
-      <div className="absolute inset-0 z-0">
-       
+    <section className="relative min-h-0 lg:min-h-screen flex flex-col justify-start lg:justify-center items-start overflow-hidden bg-black">
+      <div className="hidden lg:block absolute inset-0 z-0">
         <video
           autoPlay
           muted
@@ -124,40 +123,81 @@ export function HeroSection() {
           playsInline
           preload="metadata"
           aria-hidden="true"
-          className=" w-full h-full object-cover object-center opacity-80 "
+          className="w-full h-full object-cover object-center opacity-80"
         >
           <source src="/bg-hero_small.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+
+        <div className="absolute inset-0 z-[2] overflow-hidden pointer-events-none opacity-20">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={`desktop-h-${i}`}
+              className="absolute h-px bg-white/10"
+              style={{
+                top: `${12.5 * (i + 1)}%`,
+                left: 0,
+                right: 0,
+              }}
+            />
+          ))}
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={`desktop-v-${i}`}
+              className="absolute w-px bg-white/10"
+              style={{
+                left: `${8.33 * (i + 1)}%`,
+                top: 0,
+                bottom: 0,
+              }}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="absolute inset-0 z-[2] overflow-hidden pointer-events-none opacity-20">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={`h-${i}`}
-            className="absolute h-px bg-white/10"
-            style={{
-              top: `${12.5 * (i + 1)}%`,
-              left: 0,
-              right: 0,
-            }}
-          />
-        ))}
-        {[...Array(12)].map((_, i) => (
-          <div
-            key={`v-${i}`}
-            className="absolute w-px bg-white/10"
-            style={{
-              left: `${8.33 * (i + 1)}%`,
-              top: 0,
-              bottom: 0,
-            }}
-          />
-        ))}
+      <div className="order-2 lg:hidden relative w-full h-[34vh] min-h-[210px] max-h-[320px] z-0">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center opacity-80"
+        >
+          <source src="/bg-hero_small.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/70" />
+
+        <div className="absolute inset-0 z-[2] overflow-hidden pointer-events-none opacity-20">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={`mobile-h-${i}`}
+              className="absolute h-px bg-white/10"
+              style={{
+                top: `${12.5 * (i + 1)}%`,
+                left: 0,
+                right: 0,
+              }}
+            />
+          ))}
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={`mobile-v-${i}`}
+              className="absolute w-px bg-white/10"
+              style={{
+                left: `${8.33 * (i + 1)}%`,
+                top: 0,
+                bottom: 0,
+              }}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 py-32 lg:py-40">
+      <div className="order-1 lg:order-none relative z-10 w-full max-w-[1400px] mx-auto px-6 lg:px-12 mt-20 sm:mt-6 lg:mt-0 py-10 sm:py-12 lg:py-40">
         <div className="lg:max-w-[62%]">
           
 

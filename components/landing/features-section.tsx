@@ -189,13 +189,13 @@ export function FeaturesSection() {
         <div className="grid lg:grid-cols-12 gap-4 lg:gap-6">
           {/* Large feature card */}
           <div 
-            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[500px] overflow-hidden group transition-all duration-700 flex ${
+            className={`lg:col-span-12 relative bg-black border border-foreground/10 min-h-[500px] overflow-hidden group transition-all duration-700 flex flex-col lg:flex-row ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
             }`}
             onMouseEnter={() => setActiveFeature(0)}
           >
             {/* Left: text content */}
-            <div className="relative flex-1 p-8 lg:p-12 bg-black">
+            <div className="relative order-1 flex-1 p-8 lg:p-12 bg-black">
               <ParticleVisualization />
               <div className="relative z-10">
                 <h3 className="text-3xl lg:text-4xl font-display mt-4 mb-6 group-hover:translate-x-2 transition-transform duration-500">
@@ -214,7 +214,7 @@ export function FeaturesSection() {
             </div>
 
             {/* Right: mirrored image, full height */}
-            <div className="hidden lg:block relative w-[42%] shrink-0 overflow-hidden">
+            <div className="relative order-2 h-56 sm:h-72 lg:h-auto w-full lg:w-[42%] shrink-0 overflow-hidden">
               <img
                 src="/images/feature-image.png"
                 alt=""
@@ -222,8 +222,8 @@ export function FeaturesSection() {
                 className="absolute inset-0 w-full h-full object-cover object-center"
                 style={{ transform: "scaleX(-1)" }}
               />
-              {/* Fade left edge into black */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent" />
+              {/* Fade into content area on mobile/desktop */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent lg:bg-gradient-to-r lg:from-black lg:via-transparent lg:to-transparent" />
             </div>
           </div>
         </div>

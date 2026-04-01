@@ -134,7 +134,7 @@ export function IntegrationsSection() {
       </div>
 
 {/* Full-width image */}
-      <div className={`relative left-1/2 -translate-x-1/2 w-screen -mt-12 md:-mt-16 lg:-mt-76 transition-all duration-1000 delay-200 ${
+      <div className={`relative left-1/2 -translate-x-1/2 w-screen  md:-mt-16 lg:-mt-76 transition-all duration-1000 delay-200 ${
         isVisible ? "opacity-100" : "opacity-0"
       } h-[clamp(350px,56vw,920px)] bg-cover bg-center bg-no-repeat`}      style={{ backgroundImage: "url('/images/connection.png')" }}
       aria-hidden="true">
