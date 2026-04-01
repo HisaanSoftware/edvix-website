@@ -49,7 +49,7 @@ export function CtaSection() {
           <div className="relative z-10 px-8 lg:px-16 py-6 lg:py-8">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-6">
               {/* Left content */}
-              <div className="flex-1">
+              <div className="order-2 lg:order-1 flex-1">
                 <h2 className="text-3xl md:text-4xl lg:text-[52px] font-display tracking-tight mb-3 leading-[0.95]">
                   Start Your AI-Powered
                   
@@ -62,23 +62,20 @@ export function CtaSection() {
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
                   <Button
-                    size="lg"
-                    className="bg-foreground hover:bg-foreground/90 text-background px-8 h-14 text-base rounded-full group"
+                    className="bg-foreground hover:bg-foreground/90 text-background px-6 h-11 text-sm rounded-full group"
                   >
                     Enroll Now
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Button>
                   <Button
-                    size="lg"
                     variant="outline"
-                    className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                    className="h-11 px-6 text-sm rounded-full border-foreground/20 hover:bg-foreground/5"
                   >
                     Schedule Free Counseling
                   </Button>
                   <Button
-                    size="lg"
                     variant="outline"
-                    className="h-14 px-8 text-base rounded-full border-foreground/20 hover:bg-foreground/5"
+                    className="h-11 px-6 text-sm rounded-full border-foreground/20 hover:bg-foreground/5"
                   >
                     Message AI.ZA
                   </Button>
@@ -91,7 +88,7 @@ export function CtaSection() {
 
               {/* Right image */}
               <div
-                className="hidden lg:flex items-end justify-center w-[520px] h-[520px] -mr-10 bg-[length:120%_auto] bg-center bg-no-repeat"
+                className="order-1 lg:order-2 flex items-end justify-center w-full h-56 sm:h-72 lg:w-[520px] lg:h-[520px] lg:-mr-10 bg-[length:120%_auto] bg-center bg-no-repeat"
                 style={{ backgroundImage: "url('/images/bridge2.png')" }}
                 aria-hidden="true"
               />

@@ -47,9 +47,9 @@ export function InfrastructureSection() {
             Learning network
           </span>
           
-          <div className="grid lg:grid-cols-[minmax(18rem,28rem)_1fr] gap-8 lg:gap-14 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(20rem,34rem)_1fr] gap-6 sm:gap-8 lg:gap-14 items-stretch">
             {/* Image globe — colonne gauche, pleine hauteur */}
-            <div className={`w-56 md:w-64 lg:w-[24rem] xl:w-[28rem] shrink-0 transition-all duration-1000 ${
+            <div className={`order-1 mx-auto lg:mx-0 w-full max-w-[18rem] sm:max-w-[20rem] md:max-w-[22rem] lg:w-[28rem] lg:max-w-none xl:w-[32rem] shrink-0 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}>
               <img
@@ -60,7 +60,7 @@ export function InfrastructureSection() {
             </div>
 
             {/* Titre + description empilés */}
-            <div className="flex flex-col justify-center lg:items-end lg:text-right">
+            <div className="order-2 flex flex-col justify-center text-center lg:items-end lg:text-right">
               <h2 className={`text-3xl md:text-4xl lg:text-[72px] font-display tracking-tight leading-[0.9] transition-all duration-1000 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}>

@@ -28,7 +28,7 @@ export function DevelopersSection() {
   return (
     <section id="developers" ref={sectionRef} className="relative py-12 lg:py-14 overflow-hidden">
       <div
-        className={`absolute bottom-0 right-0 w-[56%] h-[86%] pointer-events-none transition-all duration-1000 delay-300 ${
+        className={`hidden lg:block absolute bottom-0 right-0 w-[56%] h-[86%] pointer-events-none transition-all duration-1000 delay-300 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -38,6 +38,18 @@ export function DevelopersSection() {
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div
+          className={`mb-6 lg:hidden transition-all duration-700 delay-75 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <img
+            src="/images/stair.png"
+            alt="AI assistant visual"
+            className="w-full h-56 sm:h-64 object-cover object-left-top"
+          />
+        </div>
+
         <div
           className={`mb-8 lg:mb-10 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -55,7 +67,7 @@ export function DevelopersSection() {
         </div>
 
         <div
-          className={`max-w-[55%] transition-all duration-700 delay-100 ${
+          className={`max-w-full lg:max-w-[55%] transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
